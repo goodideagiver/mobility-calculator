@@ -1,0 +1,8 @@
+.bg-lift {
+	background-color: var(--bg-panel);
+	padding: var(--panel-gap);
+}
+
+.vievport-vertical-fill {
+	min-height: 100vh;
+}

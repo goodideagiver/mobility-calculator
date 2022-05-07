@@ -1,0 +1,9 @@
+:root {
+	--bg: #333333;
+	--bg-panel: #434343;
+	--color-heading: #0077ff;
+	--color-text: #b5b5b5;
+
+	--panel-gap: 2rem;
+	--panel-radius: 1rem;
+}

@@ -1,0 +1,9 @@
+.editor {
+	border-radius: var(--panel-radius) 0 0 var(--panel-radius);
+	margin: var(--panel-gap) 0 var(--panel-gap) var(--panel-gap);
+}
+
+.editorBg {
+	border-radius: var(--panel-radius) 0 0 0;
+	background-color: var(--bg);
+}
