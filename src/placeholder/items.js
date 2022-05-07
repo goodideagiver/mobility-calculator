@@ -10,12 +10,7 @@ const items = [
 		sum: 0,
 	},
 	{
-		name: 'Car drop-off < 50km',
-		selected: false,
-		sum: 0,
-	},
-	{
-		name: 'Car drop-off > 50km',
+		name: 'Towing back to client',
 		selected: false,
 		sum: 0,
 	},
@@ -27,6 +22,16 @@ const items = [
 	{
 		name: 'On site repair bonus',
 		selected: true,
+		sum: 100,
+	},
+	{
+		name: 'Other transportation services',
+		selected: false,
+		sum: 100,
+	},
+	{
+		name: 'Arrival, repair on site & return',
+		selected: false,
 		sum: 100,
 	},
 ];

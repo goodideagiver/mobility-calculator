@@ -19,11 +19,11 @@ const SelectedItemsSum = (props) => {
 		<div className='inner-panel'>
 			<Layout>
 				<Row>
-					<span>Selected items: </span>
+					<span>Services selected: </span>
 					<span>20</span>
 				</Row>
 				<Row>
-					<span>Items cost: </span>
+					<span>Services cost: </span>
 					<span>326.00 zł</span>
 				</Row>
 			</Layout>
