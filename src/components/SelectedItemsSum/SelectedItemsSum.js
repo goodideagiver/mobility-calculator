@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { currencyName } from '../../data/financialConfig';
+import { useServiceContext } from '../../store/service-context';
 
 const Layout = styled.div`
 	display: flex;
@@ -15,16 +17,21 @@ const Row = styled.div`
 `;
 
 const SelectedItemsSum = (props) => {
+	const { state } = useServiceContext();
+	const { cost, count } = state;
+
+	const convertedCost = `${currencyName} ${cost.toFixed(2)}`;
+
 	return (
 		<div className='inner-panel'>
 			<Layout>
 				<Row>
 					<span>Services selected: </span>
-					<span>20</span>
+					<span>{count}</span>
 				</Row>
 				<Row>
 					<span>Services cost: </span>
-					<span>326.00 zł</span>
+					<span>{convertedCost}</span>
 				</Row>
 			</Layout>
 		</div>

@@ -4,7 +4,7 @@ const ItemContainer = styled.li`
 	display: grid;
 	grid-template-columns: 33.3% 33.3% 33.3%;
 	align-items: center;
-	border-bottom: var(--bg) solid 1px;
+	border-bottom: var(--bg) solid 0.2rem;
 	background-color: var(--bg-panel-lift);
 `;
 

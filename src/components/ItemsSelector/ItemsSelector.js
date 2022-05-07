@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-import items from '../../placeholder/items';
+import { useServiceContext } from '../../store/service-context';
 
 const ItemsContainer = styled.div`
 	display: flex;
@@ -30,13 +29,24 @@ const Item = styled.button`
 `;
 
 const ItemsSelector = (props) => {
+	const { state } = useServiceContext();
+	const items = state.items;
+	const selectedItems = items.filter((item) => !item.selected);
+
+	const visibleElement =
+		selectedItems.length > 0 ? (
+			selectedItems.map((item) => (
+				<Item key={item.name}>{item.name}</Item>
+			))
+		) : (
+			<div>
+				<p>No items</p>
+			</div>
+		);
+
 	return (
 		<ItemsContainer className='inner-panel'>
-			{items
-				.filter((item) => !item.selected)
-				.map((item) => (
-					<Item key={item.name}>{item.name}</Item>
-				))}
+			{visibleElement}
 		</ItemsContainer>
 	);
 };
