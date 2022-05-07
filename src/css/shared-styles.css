@@ -1,3 +1,9 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 .bg-lift {
 	background-color: var(--bg-panel);
 	padding: var(--panel-gap);
@@ -5,4 +11,13 @@
 
 .vievport-vertical-fill {
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.inner-panel {
+	padding: var(--panel-gap);
+	background-color: var(--bg-panel-lift);
+	border-radius: var(--panel-radius);
+	color: white;
 }
