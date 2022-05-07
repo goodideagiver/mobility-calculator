@@ -2,7 +2,7 @@ import { currencyName } from '../../data/financialConfig';
 import { useServiceContext } from '../../store/service-context';
 import { Layout, Row } from './SelectedItemsSumStyles';
 
-const SelectedItemsSum = (props) => {
+const SelectedItemsSum = () => {
 	const { state } = useServiceContext();
 	const { cost, count } = state;
 

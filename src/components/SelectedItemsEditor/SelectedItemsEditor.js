@@ -4,7 +4,7 @@ import classes from './SelectedItemsEditor.module.css';
 
 import NoItemsMessage from '../NoItemsMessage/NoItemsMessage';
 
-const SelectedItemsEditor = (props) => {
+const SelectedItemsEditor = () => {
 	const { state } = useServiceContext();
 	const items = state.items;
 	const selectedItems = items.filter((item) => item.selected);
