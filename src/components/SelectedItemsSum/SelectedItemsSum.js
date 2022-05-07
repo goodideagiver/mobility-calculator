@@ -1,20 +1,6 @@
-import styled from 'styled-components';
 import { currencyName } from '../../data/financialConfig';
 import { useServiceContext } from '../../store/service-context';
-
-const Layout = styled.div`
-	display: flex;
-	gap: 1rem;
-	flex-direction: column;
-`;
-
-const Row = styled.div`
-	display: flex;
-	gap: 1rem;
-	padding-bottom: 1rem;
-	border-bottom: 1px solid var(--bg);
-	justify-content: space-between;
-`;
+import { Layout, Row } from './SelectedItemsSumStyles';
 
 const SelectedItemsSum = (props) => {
 	const { state } = useServiceContext();
