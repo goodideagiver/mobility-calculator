@@ -17,7 +17,7 @@ const ItemDiv = styled.div`
 
 const ItemEditButton = styled.button`
 	flex: 2;
-	background: gray;
+	background: var(--color-hl);
 	color: white;
 	cursor: pointer;
 	border: 0;
@@ -28,7 +28,7 @@ const ItemEditButton = styled.button`
 	word-break: break-all;
 
 	&:hover {
-		background: black;
+		background: var(--color-hl-hov);
 	}
 
 	&:active {

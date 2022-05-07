@@ -10,7 +10,7 @@ const ItemsContainer = styled.div`
 `;
 
 const Item = styled.button`
-	background: gray;
+	background: var(--color-hl);
 	color: white;
 	cursor: pointer;
 	border: 0;
@@ -21,7 +21,7 @@ const Item = styled.button`
 	word-break: break-all;
 
 	&:hover {
-		background: black;
+		background: var(--color-hl-hov);
 	}
 
 	&:active {

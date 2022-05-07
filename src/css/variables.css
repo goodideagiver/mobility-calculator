@@ -1,9 +1,11 @@
 :root {
-	--bg: #333333;
-	--bg-panel: #434343;
-	--bg-panel-lift: hsl(0, 0%, 36%);
-	--color-heading: #0077ff;
-	--color-text: #b5b5b5;
+	--bg: hsl(0, 0%, 14%);
+	--bg-panel: hsl(0, 0%, 28%);
+	--bg-panel-lift: hsl(0, 0%, 22%);
+	--color-text: hsl(0, 0%, 91%);
+
+	--color-hl: hsl(212, 70%, 50%);
+	--color-hl-hov: hsl(212, 50%, 40%);
 
 	--panel-gap: 2rem;
 	--panel-radius: 1rem;

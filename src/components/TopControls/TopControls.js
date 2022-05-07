@@ -7,7 +7,7 @@ const ControlsContainer = styled.div`
 `;
 
 const MainButton = styled.button`
-	background: gray;
+	background: var(--color-hl);
 	color: white;
 	cursor: pointer;
 	border: 0;
@@ -17,7 +17,7 @@ const MainButton = styled.button`
 	padding: 0.5rem;
 
 	&:hover {
-		background: black;
+		background: var(--color-hl-hov);
 	}
 
 	&:active {
