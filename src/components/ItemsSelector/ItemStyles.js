@@ -13,6 +13,7 @@ export const StyledItem = styled.button`
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	animation: reveal 0.3s forwards;
 
 	&:hover {
 		background: var(--color-hl-hov);
@@ -20,5 +21,13 @@ export const StyledItem = styled.button`
 
 	&:active {
 		transform: translate(0, 2px);
+	}
+
+	@keyframes reveal {
+		from {
+			filter: brightness(1.5);
+		}
+		to {
+		}
 	}
 `;

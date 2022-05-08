@@ -6,6 +6,15 @@ const ItemContainer = styled.li`
 	align-items: center;
 	border-bottom: var(--bg) solid 0.2rem;
 	background-color: var(--bg-panel-lift);
+	animation: reveal 0.2s forwards;
+
+	@keyframes reveal {
+		from {
+			filter: brightness(1.5);
+		}
+		to {
+		}
+	}
 `;
 
 const ItemDiv = styled.div`
