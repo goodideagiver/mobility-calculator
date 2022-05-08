@@ -16,6 +16,9 @@ export const Item = styled.button`
 	font-weight: bold;
 	padding: 1rem;
 	word-break: break-all;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 
 	&:hover {
 		background: var(--color-hl-hov);
