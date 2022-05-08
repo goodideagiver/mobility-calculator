@@ -18,6 +18,7 @@ const SelectedItemsEditor = () => {
 						name={item.name}
 						sum={item.sum}
 						key={item.name}
+						editable={item.editable}
 					/>
 				))}
 			</ul>

@@ -66,7 +66,7 @@ const ItemResetButton = styled.button`
 	flex: 1;
 `;
 
-const SelectedItem = ({ name, sum, dispatch }) => {
+const SelectedItem = ({ name, sum, dispatch, editable }) => {
 	const resetBtnHandler = () => {
 		dispatch({ type: 'ENABLE/DISABLE', name, select: false });
 	};
@@ -76,7 +76,7 @@ const SelectedItem = ({ name, sum, dispatch }) => {
 			<ItemDiv>{name}</ItemDiv>
 			<ItemDiv>{sum}</ItemDiv>
 			<ItemDiv>
-				<ItemEditButton>Edit</ItemEditButton>
+				{editable === true && <ItemEditButton>Edit</ItemEditButton>}
 				<ItemResetButton onClick={resetBtnHandler}>
 					Remove
 				</ItemResetButton>

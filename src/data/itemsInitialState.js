@@ -7,12 +7,14 @@ const items = [
 		selected: false,
 		sum: 0,
 		type: serviceType.beforeRepair,
+		editable: true,
 	},
 	{
 		name: 'Rental car',
 		selected: false,
 		sum: 0,
 		type: serviceType.beforeRepair,
+		editable: true,
 	},
 	{
 		name: 'Towing back to client',
@@ -20,6 +22,7 @@ const items = [
 		sum: 0,
 		distance: 0,
 		type: serviceType.afterRepair,
+		editable: true,
 	},
 	{
 		name: 'Documentation',
@@ -35,8 +38,10 @@ const items = [
 		name: 'Plane/train',
 		selected: false,
 		sum: 0,
+		editable: true,
 	},
 	{
+		editable: true,
 		name: 'Hotel',
 		selected: false,
 		sum: 0,
@@ -54,6 +59,7 @@ const items = [
 		selected: false,
 		sum: 0,
 		type: serviceType.beforeRepair,
+		editable: true,
 	},
 	{
 		name: 'Taxi/Public commute/Car return',
@@ -61,6 +67,7 @@ const items = [
 		sum: 0,
 		maxSum: limits['Taxi/Public commute/Car return'],
 		type: serviceType.afterRepair,
+		editable: true,
 	},
 ];
 
