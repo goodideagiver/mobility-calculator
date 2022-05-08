@@ -1,5 +1,7 @@
 import { useServiceContext } from '../../store/service-context';
-import { Item, ItemsContainer, NoItemsInfoDiv } from './ItemsSelectorStyles';
+import { ItemsContainer, NoItemsInfoDiv } from './ItemsSelectorStyles';
+
+import Item from './Item';
 
 const ItemsSelector = (props) => {
 	const { state } = useServiceContext();
@@ -9,7 +11,7 @@ const ItemsSelector = (props) => {
 	const visibleElement =
 		selectedItems.length > 0 ? (
 			selectedItems.map((item) => (
-				<Item key={item.name}>{item.name}</Item>
+				<Item key={item.name} name={item.name} />
 			))
 		) : (
 			<NoItemsInfoDiv>
