@@ -11,14 +11,16 @@ const SelectedItemsEditor = () => {
 
 	const visibleElement =
 		selectedItems.length > 0 ? (
-			selectedItems.map((item) => (
-				<SelectedItem
-					dispatch={dispatch}
-					name={item.name}
-					sum={item.sum}
-					key={item.name}
-				/>
-			))
+			<ul>
+				{selectedItems.map((item) => (
+					<SelectedItem
+						dispatch={dispatch}
+						name={item.name}
+						sum={item.sum}
+						key={item.name}
+					/>
+				))}
+			</ul>
 		) : (
 			<NoItemsMessage>
 				<p>No selected items</p>
