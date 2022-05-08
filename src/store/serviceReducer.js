@@ -1,5 +1,3 @@
-import items from '../data/itemsInitialState';
-
 const serviceReducer = (state, action) => {
 	switch (action.type) {
 		case 'ENABLE/DISABLE':
