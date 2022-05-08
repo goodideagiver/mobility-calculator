@@ -1,3 +1,5 @@
+import items from '../data/itemsInitialState';
+
 const serviceReducer = (state, action) => {
 	switch (action.type) {
 		case 'ENABLE/DISABLE':
@@ -19,7 +21,10 @@ const serviceReducer = (state, action) => {
 				newItemCount = newSumItems.length;
 			}
 			return { items: newItems, cost: newSum, count: newItemCount };
-
+		case 'RESET':
+			const newItemsReset = [...state.items];
+			newItemsReset.forEach((item) => (item.selected = false));
+			return { items: newItemsReset, cost: 0, count: 0 };
 		default:
 			break;
 	}
