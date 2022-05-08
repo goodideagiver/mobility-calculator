@@ -1,5 +1,5 @@
 import { useServiceContext } from '../../store/service-context';
-import { Item, ItemsContainer } from './ItemsSelectorStyles';
+import { Item, ItemsContainer, NoItemsInfoDiv } from './ItemsSelectorStyles';
 
 const ItemsSelector = (props) => {
 	const { state } = useServiceContext();
@@ -12,9 +12,9 @@ const ItemsSelector = (props) => {
 				<Item key={item.name}>{item.name}</Item>
 			))
 		) : (
-			<div>
+			<NoItemsInfoDiv>
 				<p>No items</p>
-			</div>
+			</NoItemsInfoDiv>
 		);
 
 	return (
