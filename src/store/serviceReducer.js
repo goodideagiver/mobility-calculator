@@ -1,22 +1,25 @@
 const serviceReducer = (state, action) => {
 	switch (action.type) {
 		case 'ENABLE/DISABLE':
+			const selectedItem = action.name;
+			const isSelected = action.select;
+
 			const newItems = [...state.items];
 			const indexOfChangedItem = newItems.findIndex(
-				(item) => item.name === action.name
+				(item) => item.name === selectedItem
 			);
 
 			const newItem = newItems[indexOfChangedItem];
-			newItem.selected = action.select;
+			newItem.selected = isSelected;
 
-			const newSumItems = newItems.filter((item) => item.selected);
+			const selectedItems = newItems.filter((item) => item.selected);
 
 			let newSum = 0;
 			let newItemCount = 0;
 
-			if (newSumItems.length) {
-				newSumItems.forEach((item) => (newSum += item.sum));
-				newItemCount = newSumItems.length;
+			if (selectedItems.length) {
+				selectedItems.forEach((item) => (newSum += item.sum));
+				newItemCount = selectedItems.length;
 			}
 			return { items: newItems, cost: newSum, count: newItemCount };
 		case 'RESET':
