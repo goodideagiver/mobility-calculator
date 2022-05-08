@@ -7,7 +7,6 @@ export const ItemsContainer = styled.div`
 	flex: 1;
 `;
 
-
 export const NoItemsInfoDiv = styled.div`
 	display: grid;
 	height: 100%;

@@ -5,14 +5,19 @@ import classes from './SelectedItemsEditor.module.css';
 import NoItemsMessage from '../NoItemsMessage/NoItemsMessage';
 
 const SelectedItemsEditor = () => {
-	const { state } = useServiceContext();
+	const { state, dispatch } = useServiceContext();
 	const items = state.items;
 	const selectedItems = items.filter((item) => item.selected);
 
 	const visibleElement =
 		selectedItems.length > 0 ? (
 			selectedItems.map((item) => (
-				<SelectedItem name={item.name} sum={item.sum} key={item.name} />
+				<SelectedItem
+					dispatch={dispatch}
+					name={item.name}
+					sum={item.sum}
+					key={item.name}
+				/>
 			))
 		) : (
 			<NoItemsMessage>

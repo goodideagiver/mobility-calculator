@@ -1,8 +1,8 @@
 import { StyledItem } from './ItemStyles';
 
-const Item = ({ name }) => {
+const Item = ({ name, dispatch }) => {
 	const itemClickHandler = () => {
-		console.log(name);
+		dispatch({ type: 'ENABLE/DISABLE', name, select: true });
 	};
 
 	return <StyledItem onClick={itemClickHandler}>{name}</StyledItem>;
