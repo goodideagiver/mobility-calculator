@@ -1,22 +1,29 @@
 import { itemNames } from '../../data/itemsInitialState';
 import Modal from '../UI/Modal/Modal';
+import ArrivalAndRepair from './ServiceModalComponents/ArrivalAndRepair';
+import Hotel from './ServiceModalComponents/Hotel';
+import PlaneTrain from './ServiceModalComponents/PlaneTrain';
+import RentalCar from './ServiceModalComponents/RentalCar';
+import TaxiOrCarReturn from './ServiceModalComponents/TaxiOrCarReturn';
+import Towing from './ServiceModalComponents/Towing';
+import TowingBackToClient from './ServiceModalComponents/TowingBackToClient';
 
 const getServiceComponentByName = (name) => {
 	switch (name) {
 		case itemNames.towing:
-			break;
+			return <Towing />;
 		case itemNames.rentalCar:
-			break;
+			return <RentalCar />;
 		case itemNames.towingBack:
-			break;
+			return <TowingBackToClient />;
 		case itemNames.arrivalAndRepair:
-			break;
+			return <ArrivalAndRepair />;
 		case itemNames.hotel:
-			break;
+			return <Hotel />;
 		case itemNames.planeTrain:
-			break;
+			return <PlaneTrain />;
 		case itemNames.taxi:
-			break;
+			return <TaxiOrCarReturn />;
 
 		default:
 			return;
