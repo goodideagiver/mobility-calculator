@@ -25,10 +25,12 @@ const StyledLabel = styled.label`
 `;
 
 const Input = ({ label }) => {
+	const inputId = label + 'Input';
+
 	return (
 		<StyledRow>
-			<StyledLabel>{label}</StyledLabel>
-			<StyledInput />
+			<StyledLabel for={inputId}>{label}</StyledLabel>
+			<StyledInput id={inputId} />
 		</StyledRow>
 	);
 };
