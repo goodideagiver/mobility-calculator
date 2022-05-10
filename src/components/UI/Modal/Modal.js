@@ -67,7 +67,7 @@ const Modal = ({ onConfirm, ...props }) => {
 	return ReactDOM.createPortal(
 		<>
 			<Backdrop onConfirm={onConfirm} />
-			<Content {...props} />
+			<Content onConfirm={onConfirm} {...props} />
 		</>,
 		document.getElementById('overlay')
 	);

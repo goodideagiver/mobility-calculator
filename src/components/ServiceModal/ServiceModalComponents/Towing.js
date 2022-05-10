@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Input from './UI/Input';
 
 const Towing = () => {
-  return (
-    <div>Towing</div>
-  )
-}
+	return (
+		<div>
+			<Input label='Distance (KM)' />
+		</div>
+	);
+};
 
-export default Towing
+export default Towing;
