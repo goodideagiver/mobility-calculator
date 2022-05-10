@@ -30,14 +30,14 @@ const CustomCheckbox = styled.label`
 	}
 `;
 
-const Checkbox = ({ label }) => {
+const Checkbox = ({ label, ...props }) => {
 	const checkboxId = label + 'Checkbox';
 
 	return (
 		<StyledRow>
-			<StyledLabel for={checkboxId}>{label}</StyledLabel>
+			<StyledLabel htmlFor={checkboxId}>{label}</StyledLabel>
 			<CustomCheckbox>
-				<StyledCheckbox type={'checkbox'} id={checkboxId} />
+				<StyledCheckbox {...props} type={'checkbox'} id={checkboxId} />
 				<span />
 			</CustomCheckbox>
 		</StyledRow>

@@ -8,13 +8,13 @@ const StyledInput = styled.input`
 	border: 0;
 `;
 
-const Input = ({ label }) => {
+const Input = ({ label, ...props }) => {
 	const inputId = label + 'Input';
 
 	return (
 		<StyledRow>
-			<StyledLabel for={inputId}>{label}</StyledLabel>
-			<StyledInput id={inputId} />
+			<StyledLabel htmlFor={inputId}>{label}</StyledLabel>
+			<StyledInput {...props} id={inputId} />
 		</StyledRow>
 	);
 };

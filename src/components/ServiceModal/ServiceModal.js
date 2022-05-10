@@ -1,4 +1,5 @@
 import { itemNames } from '../../data/itemsInitialState';
+import { useServiceContext } from '../../store/service-context';
 import Modal from '../UI/Modal/Modal';
 import ArrivalAndRepair from './ServiceModalComponents/ArrivalAndRepair';
 import Hotel from './ServiceModalComponents/Hotel';
@@ -8,34 +9,40 @@ import TaxiOrCarReturn from './ServiceModalComponents/TaxiOrCarReturn';
 import Towing from './ServiceModalComponents/Towing';
 import TowingBackToClient from './ServiceModalComponents/TowingBackToClient';
 
-const getServiceComponentByName = (name) => {
+const getServiceComponentByName = (name, onSumChange) => {
 	switch (name) {
 		case itemNames.towing:
-			return <Towing />;
+			return <Towing updateSum={onSumChange} />;
 		case itemNames.rentalCar:
-			return <RentalCar />;
+			return <RentalCar updateSum={onSumChange} />;
 		case itemNames.towingBack:
-			return <TowingBackToClient />;
+			return <TowingBackToClient updateSum={onSumChange} />;
 		case itemNames.arrivalAndRepair:
-			return <ArrivalAndRepair />;
+			return <ArrivalAndRepair updateSum={onSumChange} />;
 		case itemNames.hotel:
-			return <Hotel />;
+			return <Hotel updateSum={onSumChange} />;
 		case itemNames.planeTrain:
-			return <PlaneTrain />;
+			return <PlaneTrain updateSum={onSumChange} />;
 		case itemNames.taxi:
-			return <TaxiOrCarReturn />;
+			return <TaxiOrCarReturn updateSum={onSumChange} />;
 
 		default:
 			return;
 	}
 };
 
-const ServiceModal = ({ name, dispatch, onConfirm }) => {
+const ServiceModal = ({ name, onConfirm }) => {
+	const { dispatch } = useServiceContext();
+
 	const changeServiceSumHandler = (sum) => {
+		console.log(sum);
 		dispatch({ type: 'UPDATE_SUM', name, sum });
 	};
 
-	const selectedServiceComponent = getServiceComponentByName(name);
+	const selectedServiceComponent = getServiceComponentByName(
+		name,
+		changeServiceSumHandler
+	);
 
 	return (
 		<Modal onConfirm={onConfirm} title={name}>
