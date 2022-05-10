@@ -1,23 +1,35 @@
 import serviceType from './serviceType';
 import { limits } from './financialConfig';
 
+export const itemNames = {
+	towing: 'Towing',
+	rentalCar: 'Rental car',
+	towingBack: 'Towing back to client',
+	documentation: 'Documentation',
+	repairBonus: 'On site repair bonus',
+	planeTrain: 'Plane/train',
+	hotel: 'Hotel',
+	arrivalAndRepair: 'Arrival, repair on site & return',
+	taxi: 'Taxi/Public commute/Car return',
+};
+
 const items = [
 	{
-		name: 'Towing',
+		name: itemNames.towing,
 		selected: false,
 		sum: 0,
 		type: serviceType.beforeRepair,
 		editable: true,
 	},
 	{
-		name: 'Rental car',
+		name: itemNames.rentalCar,
 		selected: false,
 		sum: 0,
 		type: serviceType.beforeRepair,
 		editable: true,
 	},
 	{
-		name: 'Towing back to client',
+		name: itemNames.towingBack,
 		selected: false,
 		sum: 0,
 		distance: 0,
@@ -25,24 +37,24 @@ const items = [
 		editable: true,
 	},
 	{
-		name: 'Documentation',
+		name: itemNames.documentation,
 		selected: false,
 		sum: 100,
 	},
 	{
-		name: 'On site repair bonus',
+		name: itemNames.repairBonus,
 		selected: false,
 		sum: 100,
 	},
 	{
-		name: 'Plane/train',
+		name: itemNames.planeTrain,
 		selected: false,
 		sum: 0,
 		editable: true,
 	},
 	{
 		editable: true,
-		name: 'Hotel',
+		name: itemNames.hotel,
 		selected: false,
 		sum: 0,
 		numberOfPeople: 1,
@@ -55,17 +67,17 @@ const items = [
 		},
 	},
 	{
-		name: 'Arrival, repair on site & return',
+		name: itemNames.arrivalAndRepair,
 		selected: false,
 		sum: 0,
 		type: serviceType.beforeRepair,
 		editable: true,
 	},
 	{
-		name: 'Taxi/Public commute/Car return',
+		name: itemNames.taxi,
 		selected: false,
 		sum: 0,
-		maxSum: limits['Taxi/Public commute/Car return'],
+		maxSum: limits.taxi,
 		type: serviceType.afterRepair,
 		editable: true,
 	},

@@ -18,7 +18,7 @@ export const towingRates = {
 };
 
 export const limits = {
-	'Taxi/Public commute/Car return': 300,
+	taxi: 300,
 	hotel: {
 		costPerDay: 533.33,
 		daysLimit: 3,
