@@ -17,6 +17,7 @@ const ContentStyle = styled.div`
 	left: 50%;
 	width: 40rem;
 	transform: translate(-50%, -50%);
+	background: var(--bg-panel);
 
 	max-width: 90vw;
 	max-height: 90vh;
