@@ -8,7 +8,7 @@ const BackdropStyle = styled.div`
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #000000;
+	background: hsla(0, 0%, 0%, 0.8);
 `;
 
 const ContentStyle = styled.div`
@@ -18,6 +18,8 @@ const ContentStyle = styled.div`
 	width: 40rem;
 	transform: translate(-50%, -50%);
 	background: var(--bg-panel);
+	padding: var(--panel-gap);
+	border-radius: var(--panel-radius);
 
 	max-width: 90vw;
 	max-height: 90vh;
@@ -26,6 +28,23 @@ const ContentStyle = styled.div`
 const StyledModalHeader = styled.header`
 	display: flex;
 	gap: 1rem;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+`;
+
+const CloseButton = styled.button`
+	background: var(--color-hl);
+	color: white;
+	border-radius: 1rem;
+	border: 0;
+	padding: 1rem;
+	opacity: 0.8;
+	cursor: pointer;
+
+	&:hover {
+		background: var(--color-hl-hov);
+	}
 `;
 
 const Backdrop = ({ onConfirm }) => {
@@ -37,7 +56,7 @@ const Content = ({ title, children, onConfirm }) => {
 		<ContentStyle>
 			<StyledModalHeader>
 				<h2>{title}</h2>
-				<button onClick={onConfirm}>Close</button>
+				<CloseButton onClick={onConfirm}>Close</CloseButton>
 			</StyledModalHeader>
 			<main>{children}</main>
 		</ContentStyle>

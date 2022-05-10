@@ -30,14 +30,18 @@ const getServiceComponentByName = (name) => {
 	}
 };
 
-const ServiceModal = ({ name, dispatch }) => {
+const ServiceModal = ({ name, dispatch, onConfirm }) => {
 	const changeServiceSumHandler = (sum) => {
 		dispatch({ type: 'UPDATE_SUM', name, sum });
 	};
 
 	const selectedServiceComponent = getServiceComponentByName(name);
 
-	return <Modal>{selectedServiceComponent}</Modal>;
+	return (
+		<Modal onConfirm={onConfirm} title={name}>
+			{selectedServiceComponent}
+		</Modal>
+	);
 };
 
 export default ServiceModal;
