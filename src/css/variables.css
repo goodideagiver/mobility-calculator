@@ -1,14 +1,18 @@
 :root {
-	--bg: hsl(0, 0%, 14%);
-	--bg-panel: hsl(0, 0%, 28%);
-	--bg-panel-lift: hsl(0, 0%, 22%);
+	--bg: #121212;
+	--bg-panel: #292929;
+	--bg-panel-lift: #1F1F1F;
 	--color-text: hsl(0, 0%, 91%);
+
+	/* 292929 */
+	/* 121212 */
+	/* 1F1F1F */
 
 	--color-hl: hsl(212, 70%, 50%);
 	--color-hl-hov: hsl(212, 50%, 40%);
 
 	--panel-gap: 1.5rem;
-	--panel-radius: 1rem;
+	--panel-radius: 0.5rem;
 
 	--shadow-high: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
 		rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
