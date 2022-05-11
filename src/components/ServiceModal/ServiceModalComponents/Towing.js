@@ -44,6 +44,8 @@ const Towing = ({ updateSum }) => {
 				onInput={distanceInputHandler}
 				label='Distance'
 				type='number'
+				step='1'
+				min='0'
 			/>
 			<Checkbox
 				value={higherTonnage}

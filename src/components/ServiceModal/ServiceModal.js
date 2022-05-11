@@ -35,7 +35,6 @@ const ServiceModal = ({ name, onConfirm }) => {
 	const { dispatch } = useServiceContext();
 
 	const changeServiceSumHandler = (sum) => {
-		console.log(sum);
 		dispatch({ type: 'UPDATE_SUM', name, sum });
 	};
 

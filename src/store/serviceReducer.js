@@ -27,7 +27,6 @@ const serviceReducer = (state, action) => {
 			newItemsReset.forEach((item) => (item.selected = false));
 			return { items: newItemsReset, cost: 0, count: 0 };
 		case 'UPDATE_SUM':
-			console.log(action);
 			state.items.find((item) => item.name === action.name).sum =
 				action.sum;
 

@@ -1,9 +1,13 @@
-import React from 'react'
+import Input from './UI/Input';
+import SumPreview from './UI/SumPreview';
 
 const TaxiOrCarReturn = () => {
-  return (
-    <div>TaxiOrCarReturn</div>
-  )
-}
+	return (
+		<form>
+			<Input label='Service cost' />
+			<SumPreview name='Service cost' />
+		</form>
+	);
+};
 
-export default TaxiOrCarReturn
+export default TaxiOrCarReturn;

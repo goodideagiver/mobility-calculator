@@ -17,6 +17,11 @@ export const towingRates = {
 	},
 };
 
+export const towingBackRates = {
+	handlingFee: 50,
+	rate: 1.5,
+};
+
 export const limits = {
 	taxi: 300,
 	hotel: {
