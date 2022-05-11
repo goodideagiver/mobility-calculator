@@ -24,7 +24,15 @@ const serviceReducer = (state, action) => {
 			return { items: newItems, cost: newSum, count: newItemCount };
 		case 'RESET':
 			const newItemsReset = [...state.items];
+
 			newItemsReset.forEach((item) => (item.selected = false));
+
+			newItemsReset.forEach((item) => {
+				if (item.editable) {
+					item.sum = 0;
+				}
+			});
+
 			return { items: newItemsReset, cost: 0, count: 0 };
 		case 'UPDATE_SUM':
 			state.items.find((item) => item.name === action.name).sum =
