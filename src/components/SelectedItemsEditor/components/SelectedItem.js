@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { currencyName } from '../../../data/financialConfig';
 
 const ItemContainer = styled.li`
 	display: grid;
@@ -71,10 +72,12 @@ const SelectedItem = ({ name, sum, dispatch, editable, onEdit }) => {
 		dispatch({ type: 'ENABLE/DISABLE', name, select: false });
 	};
 
+	const displayedSum = `${currencyName} ${sum.toFixed(2)}`;
+
 	return (
 		<ItemContainer>
 			<ItemDiv>{name}</ItemDiv>
-			<ItemDiv>{sum}</ItemDiv>
+			<ItemDiv>{displayedSum}</ItemDiv>
 			<ItemDiv>
 				{editable === true && (
 					<ItemEditButton onClick={onEdit.bind(null, name)}>
