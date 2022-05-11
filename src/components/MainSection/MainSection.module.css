@@ -3,4 +3,5 @@
 	grid-template-columns: 20% auto;
 	background-color: var(--bg-panel);
 	flex: 1;
+	overflow: auto;
 }

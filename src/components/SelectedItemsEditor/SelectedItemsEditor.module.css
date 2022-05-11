@@ -3,11 +3,13 @@
 	margin: var(--panel-gap) 0 var(--panel-gap) var(--panel-gap);
 	flex: 1;
 	padding: 0;
-	overflow: hidden;
+	overflow: auto;
+	max-height: 100%;
 }
 
 .editorBg {
 	display: flex;
 	border-radius: var(--panel-radius) 0 0 0;
 	background-color: var(--bg);
+	overflow: auto;
 }
